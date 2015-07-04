@@ -251,11 +251,16 @@
 		// If you just want the numbers
 		console.log(helper.box.min.y);
 		mesh.scale.x = document.getElementById("model_x").value;
-		mesh.scale.y = document.getElementById("model_y").value;
+		new_y = document.getElementById("model_y").value;
+		if(new_y != old_y)
+		{
+			mesh.position.y = 0 + (helper.box.min.y - offset);
+		}
+		mesh.scale.y = new_y
 		mesh.scale.z = document.getElementById("model_z").value;
 		
-		offset = -1397;
-		mesh.position.y = 0 + (helper.box.min.y - offset);
+		old_y = new_y;
+		
 	}
 </script>
 
