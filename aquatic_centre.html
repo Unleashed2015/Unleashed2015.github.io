@@ -245,8 +245,11 @@
 		ambient = scene.getObjectByName( "ambient" );
 		ambient.color.setHex( '0x' + document.getElementById( 'colorPicker' ).value);
 		mesh = scene.getObjectByName( "obj_mesh" );
-		var boundingBox = mesh.geometry.boundingBox.clone();
-		console.log(boundingBox.min.y)
+		var helper = new THREE.BoundingBoxHelper(mesh, 0xff0000);
+		helper.update();
+		// If you just want the numbers
+		console.log(helper.box.min);
+		console.log(helper.box.max);
 		mesh.scale.x = document.getElementById("model_x").value;
 		mesh.scale.y = document.getElementById("model_y").value;
 		mesh.scale.z = document.getElementById("model_z").value;
