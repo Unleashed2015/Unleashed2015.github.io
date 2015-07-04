@@ -64,9 +64,9 @@
 										<div id="aCanvas"></div>
 										<div>
 											<input id="colorPicker" class="color" value="ffffff"></br>
-											Length: <input id="model_x" type="range"  min=".25" max="5" value="1" step="0.5" /></br>
-											Width: <input id="model_z" type="range"  min=".25" max="5" value="1" step="0.5" /></br>
-											Height: <input id="model_y" type="range"  min=".25" max="5" value="1" step="0.5" /></br>
+											Length: <input id="model_x" type="range"  min=".25" max="5" value="1" step="0.25" /></br>
+											Width: <input id="model_z" type="range"  min=".25" max="5" value="1" step="0.25" /></br>
+											Height: <input id="model_y" type="range"  min=".25" max="2" value="1" step="0.25" /></br>
 										</div>
 									</div>
 									<div style="margin-left: 55%;"> 
@@ -254,16 +254,31 @@
 		// If you just want the numbers
 		console.log(helper.box.min.y);
 		mesh.scale.x = document.getElementById("model_x").value;
-		new_y = document.getElementById("model_y").value;
-
-		if(new_y != old_y)
-		{
-			mesh.position.y = 0 + (helper.box.min.y - offset);
-		}
-		mesh.scale.y = new_y
+		mesh.scale.y = document.getElementById("model_y").value;
 		mesh.scale.z = document.getElementById("model_z").value;
-		
-		old_y = new_y;
+
+		switch(mesh.scale.y) {
+			case 0.75:
+				mesh.position.y = 0;
+				break;
+			case 0.5:
+				mesh.position.y = 0;
+				break;
+			case 1.25:
+				mesh.position.y = 0;
+				break;
+			case 1.5:
+				mesh.position.y = 0;
+				break;
+			case 1.75:
+				mesh.position.y = 0;
+				break;				
+			case 2:
+				mesh.position.y = 0;
+				break;				
+			default:
+				mesh.position.y = 0;
+		}
 		
 	}
 </script>
