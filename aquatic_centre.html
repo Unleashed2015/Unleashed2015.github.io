@@ -233,6 +233,8 @@
 	}
 	
 	var old_y = 0;
+	var offset = -1370;
+	
 	/*** The Loop ***/
 	function animate() {
 		// This function calls itself on every frame. You can for example change
@@ -253,6 +255,7 @@
 		console.log(helper.box.min.y);
 		mesh.scale.x = document.getElementById("model_x").value;
 		new_y = document.getElementById("model_y").value;
+
 		if(new_y != old_y)
 		{
 			mesh.position.y = 0 + (helper.box.min.y - offset);
