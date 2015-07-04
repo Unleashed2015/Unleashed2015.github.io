@@ -248,8 +248,7 @@
 		var helper = new THREE.BoundingBoxHelper(mesh, 0xff0000);
 		helper.update();
 		// If you just want the numbers
-		console.log(helper.box.min);
-		console.log(helper.box.max);
+		console.log(helper.box.min.y);
 		mesh.scale.x = document.getElementById("model_x").value;
 		mesh.scale.y = document.getElementById("model_y").value;
 		mesh.scale.z = document.getElementById("model_z").value;
