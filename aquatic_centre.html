@@ -229,7 +229,7 @@
 		controls.update()
 		camera.lookAt(scene.position);
 		renderer.render(scene, camera);
-		alert(scene.getObjectByName( "ambient" ))
+		ambient = scene.getObjectByName( "ambient" )
 		ambient.color.setHex( '0x' + document.getElementById( 'colorPicker' ).value)
 	}
 </script>
