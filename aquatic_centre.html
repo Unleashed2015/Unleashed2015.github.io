@@ -206,12 +206,12 @@
 			scene.add( object );
 		});
 		
-		var plane = new THREE.Mesh(new THREE.PlaneGeometry(30000, 30000), new THREE.MeshNormalMaterial());
+		var plane = new THREE.Mesh(new THREE.PlaneGeometry(30000, 30000), new THREE.MeshNormalMaterial({color: 0x29ad1a}));
 			plane.material.side = THREE.DoubleSide;
       		plane.overdraw = true;
-      		plane.rotation.x = Math.PI/2;
-			plane.rotation.y = 0;
-			plane.rotation.z = 0;
+      		plane.rotation.x = Math.PI/2; //Make flat
+			plane.position.y = -10;
+			
       		scene.add(plane);
       		
 		// We set the renderer to the size of the window and
