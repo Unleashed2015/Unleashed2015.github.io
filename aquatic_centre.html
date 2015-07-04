@@ -258,14 +258,14 @@
 		
 		if(mesh.scale.y < old_y)
 		{
-			mesh.position.translateY(-279);
+			mesh.position.y -= 279;
 			console.log('less');
 		}
 		else
 		{
 			if(mesh.scale.y > old_y)
 			{
-				mesh.position.translateY(279);
+				mesh.position.y += 279;
 				console.log('more');
 			}
 			else
