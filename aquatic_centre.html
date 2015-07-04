@@ -245,8 +245,8 @@
 		ambient = scene.getObjectByName( "ambient" );
 		ambient.color.setHex( '0x' + document.getElementById( 'colorPicker' ).value);
 		mesh = scene.getObjectByName( "obj_mesh" );
-		difference = mesh.geometry.boundingBox.min.y
-		alert(difference)
+		var boundingBox = mesh.geometry.boundingBox.clone();
+		console.log(boundingBox.min.y)
 		mesh.scale.x = document.getElementById("model_x").value;
 		mesh.scale.y = document.getElementById("model_y").value;
 		mesh.scale.z = document.getElementById("model_z").value;
