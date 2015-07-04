@@ -33,7 +33,7 @@
 	/*** Initialise ***/
 	function init() {
 		container = document.createElement( 'div' );
-		document.body.appendChild( container );
+		document.getElementById("aCanvas").appendChild( container );
 		
 		// you can adjust the cameras distance and set the FOV to something
 		// different than 45 degrees. The last two values set the clipping plane.
@@ -175,7 +175,7 @@
 
 						<!-- Content -->
 							<section id="content">
-								<div><canvas width="960" height="475" style="width: 960px; height: 475.5px;"></canvas></div>
+								<div id="aCanvas"></div>
 								<h3>Current Competitions</h3>
 								<p><b>Rundle Mall needs a new art installation:</b> 
 								</br>&nbsp;&nbsp;5 suggestions have been offered for the location
