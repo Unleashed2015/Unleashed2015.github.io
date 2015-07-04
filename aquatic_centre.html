@@ -60,7 +60,7 @@
 						<!-- Content -->
 							<section id="content">
 								<div style="width: 100%; overflow: hidden;">
-									<div style="width: 45%; float: left;"><div id="aCanvas"></div><div><input id="colorPicker" class="color" value="ffffff"></div></div>
+									<div style="width: 45%; float: left;"><div id="aCanvas"></div><div><input id="colorPicker" class="color" value="ffffff"><input id="model_x" type="range"  min="0.0001" max="1000" value="10" /></div></div>
 									<div style="margin-left: 55%;"> 
 										<p>The Adelaide Aquatic Centre is a complex of indoor heated swimming pools operated by the Adelaide City Council and located in the northernmost extent of the Adelaide Parklands in North Adelaide. The centre opened on 20 December 1969 and is now over 40 years old.</br>
 										The Adelaide Aquatic Centre features a 50 metre Olympic-sized swimming pool and a smaller adjacent pool used for aqua aerobics, canoe polo, diving, underwater hockey and water polo. These two pools are surrounded on three sides by raised seating for competition spectators. The wet areas also include an octopus-themed 'Octopool' for children's swimming lessons and recreational use, two leisure pools, two water slides, two spas, a dry sauna and a steam room. At extra cost (unless one becomes a member), the centre offers a crèche and a health club equipped with cardio machines, pin-loaded weight machines and free weights. There are also shops providing swimming equipment and food, and an outdoor barbecue area. <i>Source: <a href="https://en.wikipedia.org/wiki/Adelaide_Aquatic_Centre">Wikipedia</a></i></p>
@@ -198,6 +198,7 @@
 			
 			// My initial model was too small, so I scaled it upwards.
 			object.scale = new THREE.Vector3( 10, 10, 10 );
+			object.name = "obj_mesh";
 			
 			// You can change the poition of the object, so that it is not 
 			// centered in the view and leaves some space for overlay text.
@@ -229,8 +230,10 @@
 		controls.update()
 		camera.lookAt(scene.position);
 		renderer.render(scene, camera);
-		ambient = scene.getObjectByName( "ambient" )
-		ambient.color.setHex( '0x' + document.getElementById( 'colorPicker' ).value)
+		ambient = scene.getObjectByName( "ambient" );
+		ambient.color.setHex( '0x' + document.getElementById( 'colorPicker' ).value);
+		mesh = scene.getObjectByName( "obj_mesh" );
+		mesh.scale.x = document.getElementById("model_x").value;
 	}
 </script>
 
