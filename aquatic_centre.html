@@ -253,7 +253,21 @@
 		mesh.scale.x = document.getElementById("model_x").value;
 		mesh.scale.y = document.getElementById("model_y").value;
 		mesh.scale.z = document.getElementById("model_z").value;
-		// mesh.position.y = 0 + (559 * (document.getElementById("model_y").value - 1 ));
+		if(document.getElementById("model_y").value > 1)
+		{
+			mesh.position.y = 0 + (559 * (document.getElementById("model_y").value - 1 ));
+		}
+		else
+		{
+			if(document.getElementById("model_y").value < 1)
+			{
+				mesh.position.y = 0 - (559 * (document.getElementById("model_y").value));
+			}
+			else
+			{
+				mesh.position.y = 0 - (559 * (document.getElementById("model_y").value));
+			}
+		}
 	}
 </script>
 
