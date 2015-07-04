@@ -59,10 +59,11 @@
 
 						<!-- Content -->
 							<section id="content">
-								<div class="container">
-									<div class="fixed">Side A</div>
-									<div class="flex-item">Side B <div id="aCanvas"></div> </div>
+								<div style="width: 100%; overflow: hidden;">
+									<div id="aCanvas" style="width: 600px; float: left;"> Left </div>
+									<div style="margin-left: 620px;"> Right </div>
 								</div>
+								
 								
 								<h3>Current Competitions</h3>
 								<p><b>Rundle Mall needs a new art installation:</b> 
@@ -134,7 +135,7 @@
 		// camera.position.y = 20000;
 		
 		// These variables set the camera behaviour and sensitivity.
-		controls = new THREE.TrackballControls( camera , renderer.domElement );
+		controls = new THREE.TrackballControls( camera , container );
 		controls.rotateSpeed = 5.0;
 		controls.zoomSpeed = 5;
 		controls.panSpeed = 2;
