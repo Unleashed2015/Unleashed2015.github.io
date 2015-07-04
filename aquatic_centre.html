@@ -206,11 +206,11 @@
 			scene.add( object );
 		});
 		
-		var plane = new THREE.Mesh(new THREE.PlaneGeometry(30000, 30000), new THREE.MeshNormalMaterial({color: 0x29ad1a}));
-			plane.material.side = THREE.DoubleSide;
+		var plane = new THREE.Mesh(new THREE.PlaneGeometry(30000, 30000), new THREE.MeshBasicMaterial( {color: 0x29ad1a, side: THREE.DoubleSide} ));
+			// plane.material.side = THREE.DoubleSide;
       		plane.overdraw = true;
       		plane.rotation.x = Math.PI/2; //Make flat
-			plane.position.y = -500;
+			plane.position.y = -600;
 			
       		scene.add(plane);
       		
