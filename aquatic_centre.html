@@ -88,11 +88,28 @@
 								</div>
 							</section>
 							<section>
-								<div class="galleria">
-									<a href="/images/AQ_1_B.png"><img src="/images/AQ_1_s.png" data-title="Tall Center" data-description="Thinner and Taller"></a>
-									<a href="/images/AQ_2_B.png"><img src="/images/AQ_2_s.png" data-title="Flat and Blue" data-description="A little down today"></a>
-									<a href="/images/AQ_3_B.png"><img src="/images/AQ_3_s.png" data-title="Tall Center" data-description="Thinner and Taller"></a>
+								<div id="images_full">
+								  <img src="./images/AQ_1_B.png" />
 								</div>
+
+								<div id="images_thumbnails">
+								  <a href="./images/AQ_1_B.png">
+									<img src="./images/AQ_1_s.png" />
+								  </a>
+								  <a href="./images/AQ_2_B.png">
+									<img src="./images/AQ_2_s.png" />
+									</a>
+								  <a href="./images/AQ_3_B.png">
+									<img src="./images/AQ_3_s.png" />
+								  </a>
+								</div>						
+								<!--
+								<div class="galleria">
+									<a href="./images/AQ_1_B.png"><img src="./images/AQ_1_s.png" data-title="Tall Center" data-description="Thinner and Taller"></a>
+									<a href="./images/AQ_2_B.png"><img src="./images/AQ_2_s.png" data-title="Flat and Blue" data-description="A little down today"></a>
+									<a href="./images/AQ_3_B.png"><img src="./images/AQ_3_s.png" data-title="Tall Center" data-description="Thinner and Taller"></a>
+								</div>
+								-->
 							</section>
 
 					</div>
@@ -115,6 +132,13 @@
 
 		</div>
 
+<script>
+	$('#images_thumbnails a').click(function(){
+	  var newImageSrc = $(this).attr('href');
+	  $('#images_full img').attr({'src': newImageSrc });
+	  return false;
+	});
+</script>
 
 <script>
 	var container;

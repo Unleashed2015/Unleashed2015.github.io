@@ -4007,3 +4007,13 @@
 					}
 
 	}
+	
+#images_full img,
+#images_thumbnails img {
+  padding:3px;
+  border:1px solid #CCC;
+}
+
+#images_thumbnails img {
+  margin:4px;
+}
