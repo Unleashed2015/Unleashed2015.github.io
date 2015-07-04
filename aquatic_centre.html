@@ -134,7 +134,7 @@
 		// camera.position.y = 20000;
 		
 		// These variables set the camera behaviour and sensitivity.
-		controls = new THREE.TrackballControls( camera , container );
+		controls = new THREE.TrackballControls( camera , renderer.domElement );
 		controls.rotateSpeed = 5.0;
 		controls.zoomSpeed = 5;
 		controls.panSpeed = 2;
