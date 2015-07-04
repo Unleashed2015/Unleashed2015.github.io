@@ -232,7 +232,7 @@
 		container.appendChild( renderer.domElement );
 	}
 	
-	var old_y = 0;
+	var old_y = 1;
 	var offset = -1370;
 	
 	/*** The Loop ***/
@@ -252,33 +252,24 @@
 		var helper = new THREE.BoundingBoxHelper(mesh, 0xff0000);
 		helper.update();
 		// If you just want the numbers
-		console.log(helper.box.min.y);
 		mesh.scale.x = document.getElementById("model_x").value;
 		mesh.scale.y = document.getElementById("model_y").value;
 		mesh.scale.z = document.getElementById("model_z").value;
 		
-		switch(mesh.scale.y) {
-			case 0.75:
+		if(mesh.scale.y < old_y)
+		{
+			mesh.position.translateY(-279);
+		}
+		else
+		{
+			if(mesh.scale.y > old_y)
+			{
 				mesh.position.translateY(279);
-				console.log('0.75')
-				break;
-			case 0.5:
-				mesh.position.translateY(279);
-				break;
-			case 1.25:
-				mesh.position.translateY(279);
-				break;
-			case 1.5:
-				mesh.position.y = 0;
-				break;
-			case 1.75:
-				mesh.position.y = 0;
-				break;				
-			case 2:
-				mesh.position.y = 0;
-				break;				
-			default:
-				mesh.position.y = 0;
+			}
+			else
+			{
+				// PASS
+			}
 		}
 		
 	}
