@@ -215,7 +215,7 @@
 		renderer = new THREE.WebGLRenderer();
 		// renderer.setSize( window.innerWidth, window.innerHeight );
 		renderer.setSize( windowHalfX / 1.5, windowHalfY);
-		container.appendChild( renderer.domElement );
+		container.insertBefore( renderer.domElement , container.firstChild );
 	}
 	
 	/*** The Loop ***/
