@@ -79,6 +79,7 @@
 											Width: <input id="model_z" type="range"  min=".25" max="5" value="1" step="0.25" /></br>
 											Height: <input id="model_y" type="range"  min=".25" max="2" value="1" step="0.25" /></br>
 										</div>
+										Download you model for 3D printing: myModel.obj
 									</div>
 									<div style="margin-left: 55%;"> 
 										<p></br>Longitude: 34°54'3"S </br>Latitude: 138°35'27"E</p>
@@ -247,7 +248,7 @@
 		// append a canvas to our HTML page.
 		renderer = new THREE.WebGLRenderer();
 		// renderer.setSize( window.innerWidth, window.innerHeight );
-		renderer.setSize( windowHalfX, windowHalfY);
+		renderer.setSize( windowHalfX/1.25, windowHalfY);
 		container.appendChild( renderer.domElement );
 	}
 	
