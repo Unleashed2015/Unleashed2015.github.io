@@ -63,10 +63,10 @@
 									<div style="width: 45%; float: left;">
 										<div id="aCanvas"></div>
 										<div>
-											<input id="colorPicker" class="color" value="ffffff"><\br>
-											Length: <input id="model_x" type="range"  min=".25" max="5" value="1" step="0.5" /><\br>
-											Width: <input id="model_z" type="range"  min=".25" max="5" value="1" step="0.5" /><\br>
-											Height: <input id="model_y" type="range"  min=".25" max="5" value="1" step="0.5" /><\br>
+											<input id="colorPicker" class="color" value="ffffff"></br>
+											Length: <input id="model_x" type="range"  min=".25" max="5" value="1" step="0.5" /></br>
+											Width: <input id="model_z" type="range"  min=".25" max="5" value="1" step="0.5" /></br>
+											Height: <input id="model_y" type="range"  min=".25" max="5" value="1" step="0.5" /></br>
 										</div>
 									</div>
 									<div style="margin-left: 55%;"> 
@@ -219,6 +219,7 @@
       		plane.overdraw = true;
       		plane.rotation.x = Math.PI/2; //Make flat
 			plane.position.y = -1000;
+			plane.name = "grass";
 			
       		scene.add(plane);
       		
@@ -244,6 +245,8 @@
 		ambient = scene.getObjectByName( "ambient" );
 		ambient.color.setHex( '0x' + document.getElementById( 'colorPicker' ).value);
 		mesh = scene.getObjectByName( "obj_mesh" );
+		difference = mesh.geometry.boundingBox.min.y - document.getObjectByName("grass").position.y
+		alert(difference)
 		mesh.scale.x = document.getElementById("model_x").value;
 		mesh.scale.y = document.getElementById("model_y").value;
 		mesh.scale.z = document.getElementById("model_z").value;
