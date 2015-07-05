@@ -3,7 +3,7 @@ Designed to increase youth engagement with City Planning, the intent of Hack my 
 
 Team name: Data Dingoes
 
-Team memebers: Ash, Cathy, Ben and Theresa
+Team memebers: Ash, Ben, Cathy and Theresa
 
 Demo url: [http://unleashed2015.github.io/](http://unleashed2015.github.io/)
 
