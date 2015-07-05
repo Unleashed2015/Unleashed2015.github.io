@@ -5,7 +5,7 @@ Team name: Data Dingoes
 
 Team memebers: Ash, Cathy, Ben and Theresa
 
-Hackerspace url: [https://hackerspace.govhack.org/content/hack-my-city] (https://hackerspace.govhack.org/content/hack-my-city)
+Hackerspace url: [https://hackerspace.govhack.org/content/hack-my-city](https://hackerspace.govhack.org/content/hack-my-city)
 
 ### Datasets Used: 
 * 3D Model with textures - data.sa.gov.au	https://data.sa.gov.au/data/dataset/3d-model/resource/c9645482-7520-41c8-bc6b-b2ffaa74a576
