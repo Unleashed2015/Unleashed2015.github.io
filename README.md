@@ -5,7 +5,7 @@ Team name: Data Dingoes
 
 Team memebers: Ash, Cathy, Ben and Theresa
 
-Video url: []()
+Video url: [https://vimeo.com/132626254](https://vimeo.com/132626254)
 
 Hackerspace url: [https://hackerspace.govhack.org/content/hack-my-city](https://hackerspace.govhack.org/content/hack-my-city)
 
